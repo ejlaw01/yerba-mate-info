@@ -36,6 +36,27 @@ h1 {
   transform: translate(-50%, 0);
 }
 
+.scroll {
+  position: fixed;
+  right: 5px;
+  z-index: 2;
+}
+
+.scroll img {
+  height: 90px;
+  float: left;
+}
+
+.scroll p {
+  position: relative;
+  top: 25px;
+  float: right;
+  transform: rotate(90deg);
+  font-family: 'Tangerine', cursive;
+  font-size: 2em;
+  color: white;
+}
+
 .landing {
   position: relative;
   height: 100vh;
@@ -44,15 +65,15 @@ h1 {
   background-size: cover;
 }
 
-.logo {
+.logo-mark {
+  top: 40%;
+  height: 45%;
   z-index: 1;
-  height: 35%;
-  top: 47%;
 }
 
-.landing h2 {
-  top: 70%;
-  color: #E7E6D4;
+#slogan {
+  bottom: 28%;
+  color: #F2F2E7;
   font-weight: bold;
   z-index: 1;
 }
@@ -87,14 +108,23 @@ h1 {
 .main {
   position: relative;
   height: auto;
-  background-color: #D6E681;
   overflow: hidden;
 }
 
+.section:first-child {
+  top: 0;
+}
+
 .section {
-  height: 75vh;
+  position: relative;
+  top: -70px;
+  height: 80vh;
   padding-top: 22px;
-  overflow: auto;
+  overflow: hidden;
+}
+
+#our-mates {
+  background-color: #D6E681;
 }
 
 .arrow-down {
@@ -108,11 +138,18 @@ h1 {
   left: 20%;
 }
 
-.column {
-  float: left;
+.section-detail {
   margin: 10px;
   margin-left: 20px;
   width: 20%;
+}
+
+.section-detail:nth-child(odd) {
+  float: left;
+}
+
+.section-detail:nth-child(even) {
+  float: right;
 }
 
 .section h1 {
@@ -122,6 +159,23 @@ h1 {
 
 .section p {
   margin-left: 15px;
+  width: 120%;
+}
+
+.down-triangle {
+  content: '';
+  position: relative;
+  left: 10%;
+	width: 0;
+	height: 0;
+  border-bottom: 50px solid transparent;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+  z-index: 1;
+}
+
+#our-mates-triangle {
+  border-top: 50px solid #D6E681;
 }
 
 .type-tile {
